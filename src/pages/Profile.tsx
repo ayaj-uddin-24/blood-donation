@@ -14,16 +14,16 @@ import { useToast } from '@/hooks/use-toast';
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    name: 'Sarah Johnson',
-    email: 'sarah.johnson@email.com',
-    phone: '+1-555-0123',
-    dateOfBirth: '1996-05-15',
-    gender: 'Female',
+    name: 'আরিফুল ইসলাম',
+    email: 'arifulislam@email.com',
+    phone: '01854526515',
+    dateOfBirth: '১৫ মে ১৯৯৬',
+    gender: 'পুরুষ',
     bloodGroup: 'O+',
-    weight: '65',
-    address: '123 Main St, Downtown',
-    emergencyContactName: 'John Doe',
-    emergencyContactPhone: '+1-555-0456',
+    weight: '৬৫ কেজি',
+    address: 'জামালখান, চকবাজার, চট্টগ্রাম-৪০০০',
+    emergencyContactName: 'আরমান হোসেন',
+    emergencyContactPhone: '01625248563',
     preferredDonationType: 'Whole Blood',
     medicalConditions: '',
   });

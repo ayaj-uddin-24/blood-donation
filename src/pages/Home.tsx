@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'; // For demo purposes, using buttons instead
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Heart, Users, Clock, Award, Phone, UserPlus, ArrowDown, CheckCircle, MapPin, Shield } from 'lucide-react';

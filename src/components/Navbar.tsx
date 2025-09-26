@@ -11,6 +11,7 @@ const Navbar = () => {
     { href: '/', label: 'Home', icon: Home },
     { href: '/donors', label: 'Find Donors', icon: Users },
     { href: '/requests', label: 'Blood Requests', icon: FileText },
+    { href: "/report", label: "Report", icon: FileText },
     { href: '/profile', label: 'Profile', icon: User },
   ];
 

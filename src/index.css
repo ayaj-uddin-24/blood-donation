@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BloodLink Blood Donation Platform Design System */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 220 9% 15%;
+
+    /* Brand colors - Medical red theme */
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 0 84% 88%;
+    --primary-dark: 0 84% 45%;
+
+    /* Secondary colors */
+    --secondary: 220 15% 97%;
+    --secondary-foreground: 220 9% 15%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 9% 15%;
+
+    /* Interactive states */
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 0 84% 95%;
+    --accent-foreground: 220 9% 15%;
+
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 84% 60%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 9% 15%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--primary-dark)) 100%
+    );
+    --gradient-card: linear-gradient(
+      135deg,
+      hsl(var(--card)) 0%,
+      hsl(var(--muted)) 100%
+    );
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 4px 16px -4px hsl(var(--primary) / 0.15);
+    --shadow-large: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+
+    /* Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode colors for future use */
+    --background: 220 9% 9%;
+    --foreground: 0 0% 95%;
+    --card: 220 9% 12%;
+    --card-foreground: 0 0% 95%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 0 84% 88%;
+    --primary-dark: 0 84% 45%;
+    --secondary: 220 9% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 9% 18%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 0 84% 25%;
+    --accent-foreground: 0 0% 95%;
+    --border: 220 9% 25%;
+    --input: 220 9% 25%;
+    --ring: 0 84% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom utility classes */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .transition-base {
+    transition: var(--transition-base);
+  }
+
+  .transition-slow {
+    transition: var(--transition-slow);
+  }
+}

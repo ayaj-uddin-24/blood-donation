@@ -199,43 +199,11 @@ const Home = () => {
       {/* Enhanced CTA Section */}
       <section className="py-24 bg-gradient-to-r from-red-600 to-red-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full opacity-20">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-300/20 rounded-full blur-3xl" />
-          </div>
-        </div>
-
-        <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative">
-          <div className="inline-flex items-center justify-center w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full mb-8">
-            <Heart className="h-12 w-12 text-white" fill="currentColor" />
-          </div>
-
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            Ready to Save Lives?
-          </h2>
-
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of heroes who are making a difference in their communities.
-            <span className="font-semibold"> Your blood type is needed right now.</span>
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <div className="group">
-              <Button size="lg" className="bg-white text-red-600 hover:bg-red-50 transition-all duration-300 px-12 py-4 rounded-full text-xl font-bold shadow-2xl hover:shadow-white/25 hover:scale-105 transform">
-                Start Saving Lives Today
-                <Heart className="h-6 w-6 ml-3 group-hover:scale-110 transition-transform" fill="currentColor" />
-              </Button>
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-full opacity-20">
+              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+              <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-300/20 rounded-full blur-3xl" />
             </div>
-
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300"
-            >
-              <MapPin className="h-6 w-6 mr-3" />
-              Find Local Requests
-            </Button>
           </div>
         </div>
       </section>

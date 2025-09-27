@@ -231,7 +231,7 @@ const Home = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300"
+              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300"
             >
               <MapPin className="h-6 w-6 mr-3" />
               Find Local Requests

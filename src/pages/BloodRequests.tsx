@@ -40,14 +40,14 @@ import {
 const mockBloodRequests = [
   {
     id: '1',
-    patientName: 'John Smith',
+    patientName: 'Rakib Hasan',
     bloodGroup: 'O-',
     urgency: 'critical',
-    hospitalName: 'City General Hospital',
-    contactInfo: '+1 555-0123',
-    location: 'New York, NY',
+    hospitalName: 'Dhaka Medical College Hospital',
+    contactInfo: '+880 1711-223344',
+    location: 'Dhaka, Bangladesh',
     requiredBy: '2024-09-27',
-    description: 'Emergency surgery required. Patient lost significant blood due to accident.',
+    description: 'Emergency surgery required. Patient lost significant blood due to accident',
     requestDate: '2024-09-26',
     status: 'active',
     responses: 12,
@@ -56,14 +56,14 @@ const mockBloodRequests = [
   },
   {
     id: '2',
-    patientName: 'Sarah Johnson',
+    patientName: 'Sumaiya Akter',
     bloodGroup: 'A+',
     urgency: 'high',
-    hospitalName: 'St. Mary Medical Center',
-    contactInfo: 'sarah.contact@email.com',
-    location: 'Los Angeles, CA',
+    hospitalName: 'Bangabandhu Sheikh Mujib Medical University (BSMMU)',
+    contactInfo: 'sumaiya.akter@email.com',
+    location: 'Shahbagh, Dhaka',
     requiredBy: '2024-09-28',
-    description: 'Scheduled surgery for cardiac procedure. Need blood reserves.',
+    description: 'Emergency surgery required. Patient lost significant blood due to accident',
     requestDate: '2024-09-25',
     status: 'active',
     responses: 8,
@@ -72,14 +72,14 @@ const mockBloodRequests = [
   },
   {
     id: '3',
-    patientName: 'Michael Chen',
+    patientName: 'Mehedi Rahman',
     bloodGroup: 'B+',
     urgency: 'medium',
-    hospitalName: 'Regional Medical Center',
-    contactInfo: '+1 555-0456',
-    location: 'Chicago, IL',
+    hospitalName: 'Chattogram Medical College Hospital',
+    contactInfo: '+880 1815-556677',
+    location: 'Chattogram, Bangladesh',
     requiredBy: '2024-09-30',
-    description: 'Treatment for blood disorder. Regular transfusions needed.',
+    description: 'Emergency surgery required. Patient lost significant blood due to accident',
     requestDate: '2024-09-24',
     status: 'fulfilled',
     responses: 15,
@@ -87,6 +87,7 @@ const mockBloodRequests = [
     verified: false
   }
 ];
+
 
 const bloodGroups = ['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'];
 const urgencyLevels = [

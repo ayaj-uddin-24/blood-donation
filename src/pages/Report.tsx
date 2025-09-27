@@ -32,48 +32,49 @@ const Report = () => {
         {
             id: '1',
             date: '2024-02-10',
-            reportedUser: 'John Doe (Donor)',
+            reportedUser: 'Abdul Karim (Donor)',
             category: 'Fake Profile',
             status: 'Under Review',
-            description: 'User provided false information about blood type and medical history. Suspected of using fake documents.',
+            description: 'Donor provided false information about blood group and donation history. Suspected of using another person’s ID.',
             evidence: 'https://example.com/evidence1.jpg',
-            resolutionNotes: 'Investigating profile authenticity with verification team.',
+            resolutionNotes: 'Verification team is checking NID and hospital donation records.',
             priority: 'High'
         },
         {
             id: '2',
             date: '2023-12-05',
-            reportedUser: 'Jane Smith (Recipient)',
+            reportedUser: 'Mitu Akter (Recipient)',
             category: 'Harassment',
             status: 'Resolved',
-            description: 'Inappropriate messages during coordination phase, including unwanted personal questions.',
+            description: 'Sent inappropriate personal messages to a donor during coordination.',
             evidence: '',
-            resolutionNotes: 'User warned and monitoring enabled. No further incidents reported.',
+            resolutionNotes: 'User received a warning and is under monitoring. No further issues reported.',
             priority: 'Medium'
         },
         {
             id: '3',
             date: '2023-09-15',
-            reportedUser: 'Alex Kim (Donor)',
+            reportedUser: 'Shafiqul Islam (Donor)',
             category: 'Spam',
             status: 'Dismissed',
-            description: 'Repeated unsolicited messages about alternative donation methods.',
+            description: 'Sent repeated messages about contacting directly outside the platform.',
             evidence: 'https://example.com/evidence3.pdf',
-            resolutionNotes: 'Investigation showed legitimate attempts to coordinate donation.',
+            resolutionNotes: 'Investigation confirmed genuine attempts to coordinate donation. Case closed.',
             priority: 'Low'
         },
         {
             id: '4',
             date: '2024-03-20',
-            reportedUser: 'Emily Davis (Recipient)',
+            reportedUser: 'Razia Sultana (Recipient)',
             category: 'Fraud',
             status: 'Under Review',
-            description: 'Suspected fake request for donations with inconsistent medical documentation.',
+            description: 'Created suspicious blood requests with inconsistent medical documents.',
             evidence: '',
-            resolutionNotes: 'Medical team reviewing submitted documentation.',
+            resolutionNotes: 'Medical verification team is reviewing hospital records and prescriptions.',
             priority: 'High'
-        },
+        }
     ];
+
 
     const reportCategories = [
         { value: 'fake-profile', label: 'Fake Profile', icon: '👤' },
@@ -216,11 +217,11 @@ const Report = () => {
 
                 <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-8">
                     <TabsList className="grid w-full max-w-md grid-cols-2 bg-white shadow-lg rounded-xl p-1 h-14 border border-gray-200">
-                        <TabsTrigger value="view" className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all">
+                        <TabsTrigger value="view" className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
                             <Eye className="h-5 w-5 mr-2" />
                             View Reports
                         </TabsTrigger>
-                        <TabsTrigger value="create" className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-blue-500 data-[state=active]:text-white transition-all">
+                        <TabsTrigger value="create" className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-primary data-[state=active]:text-white transition-all">
                             <Plus className="h-5 w-5 mr-2" />
                             New Report
                         </TabsTrigger>

@@ -42,19 +42,19 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Mahfuz Uddin',
       role: 'Blood Recipient',
       text: 'BloodLink saved my life during emergency surgery. Found a donor in just 15 minutes!',
       avatar: '👩‍⚕️'
     },
     {
-      name: 'Dr. Michael Chen',
+      name: 'Dr. Sourob Hossen',
       role: 'Emergency Physician',
       text: 'This platform has revolutionized how we handle blood emergencies in our hospital.',
       avatar: '👨‍⚕️'
     },
     {
-      name: 'Lisa Rodriguez',
+      name: 'Habibur Rahman',
       role: 'Regular Donor',
       text: 'Donating blood has never been easier. The app keeps me informed about local needs.',
       avatar: '🩸'
@@ -67,7 +67,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Red Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"  
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
           }}
@@ -197,7 +197,7 @@ const Home = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-red-600 to-red-700 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full opacity-20">
@@ -231,7 +231,7 @@ const Home = () => {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300"
+              className="border-2 border-white/30 hover:bg-white/10 backdrop-blur-sm px-12 py-4 rounded-full text-xl font-bold hover:scale-105 transform transition-all duration-300"
             >
               <MapPin className="h-6 w-6 mr-3" />
               Find Local Requests

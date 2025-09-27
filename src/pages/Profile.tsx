@@ -14,16 +14,16 @@ import { useToast } from '@/hooks/use-toast';
 const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    name: 'আরিফুল ইসলাম',
-    email: 'arifulislam@email.com',
-    phone: '01854526515',
-    dateOfBirth: '১৫ মে ১৯৯৬',
-    gender: 'পুরুষ',
+    name: 'Ayaj Uddin',
+    email: 'ayajuddin2024@gmail.com',
+    phone: '+880 131 4313 712',
+    dateOfBirth: '2005-03-27',
+    gender: 'Male',
     bloodGroup: 'O+',
-    weight: '৬৫ কেজি',
-    address: 'জামালখান, চকবাজার, চট্টগ্রাম-৪০০০',
-    emergencyContactName: 'আরমান হোসেন',
-    emergencyContactPhone: '01625248563',
+    weight: '60',
+    address: 'Muradpur, Chattogram, Bangladesh',
+    emergencyContactName: 'Ayaz',
+    emergencyContactPhone: '+880 131 4313 712',
     preferredDonationType: 'Whole Blood',
     medicalConditions: '',
   });
@@ -120,7 +120,7 @@ const Profile = () => {
   };
 
   return (
-   <div className="min-h-screen bg-secondary/30">
+    <div className="min-h-screen bg-secondary/30">
       {/* Header */}
       <div className="bg-card shadow-soft border-b border-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -135,11 +135,11 @@ const Profile = () => {
                 <h1 className="text-3xl font-bold text-foreground">{formData.name}</h1>
                 <div className="flex items-center space-x-3 mt-2">
                   <Badge className={`${getBloodGroupColor(formData.bloodGroup)} font-bold`}>
-                    {formData.bloodGroup} দাতা
+                    {formData.bloodGroup} Donor
                   </Badge>
                   <div className="flex items-center space-x-1 text-sm text-success">
                     <div className="w-2 h-2 rounded-full bg-success" />
-                    <span>সক্রিয় দাতা</span>
+                    <span>Active Donor</span>
                   </div>
                 </div>
               </div>
@@ -153,18 +153,18 @@ const Profile = () => {
                 {isEditing ? (
                   <>
                     <Save className="h-4 w-4 mr-2" />
-                    পরিবর্তন সংরক্ষণ করুন
+                    Save Changes
                   </>
                 ) : (
                   <>
                     <Edit className="h-4 w-4 mr-2" />
-                    প্রোফাইল সম্পাদনা করুন
+                    Edit Profile
                   </>
                 )}
               </Button>
               <Button onClick={handleScheduleDonation} variant="secondary">
                 <Calendar className="h-4 w-4 mr-2" />
-                রক্তদানের সময়সূচী করুন
+                Schedule Donation
               </Button>
             </div>
           </div>
@@ -189,17 +189,17 @@ const Profile = () => {
 
         <Tabs defaultValue="profile" className="space-y-6">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="profile">প্রোফাইল তথ্য</TabsTrigger>
-            <TabsTrigger value="history">রক্তদানের ইতিহাস</TabsTrigger>
-            <TabsTrigger value="achievements">অর্জনসমূহ</TabsTrigger>
+            <TabsTrigger value="profile">Profile Information</TabsTrigger>
+            <TabsTrigger value="history">Donation History</TabsTrigger>
+            <TabsTrigger value="achievements">Achievements</TabsTrigger>
           </TabsList>
 
           <TabsContent value="profile">
             <Card className="shadow-soft">
               <CardHeader>
-                <CardTitle>ব্যক্তিগত তথ্য</CardTitle>
+                <CardTitle>Personal Information</CardTitle>
                 <CardDescription>
-                  {isEditing ? 'নিচে আপনার প্রোফাইলের তথ্য সম্পাদনা করুন' : 'আপনার নিবন্ধিত দাতার তথ্য'}
+                  {isEditing ? 'Edit your profile information below' : 'Your registered donor information'}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -207,7 +207,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="name" className="flex items-center space-x-2">
                       <User className="h-4 w-4 text-primary" />
-                      <span>পুরো নাম</span>
+                      <span>Full Name</span>
                     </Label>
                     <Input
                       id="name"
@@ -222,7 +222,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="email" className="flex items-center space-x-2">
                       <Mail className="h-4 w-4 text-primary" />
-                      <span>ইমেইল ঠিকানা</span>
+                      <span>Email Address</span>
                     </Label>
                     <Input
                       id="email"
@@ -238,7 +238,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="phone" className="flex items-center space-x-2">
                       <Phone className="h-4 w-4 text-primary" />
-                      <span>ফোন নম্বর</span>
+                      <span>Phone Number</span>
                     </Label>
                     <Input
                       id="phone"
@@ -253,7 +253,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="dateOfBirth" className="flex items-center space-x-2">
                       <Calendar className="h-4 w-4 text-primary" />
-                      <span>জন্ম তারিখ</span>
+                      <span>Date of Birth</span>
                     </Label>
                     <Input
                       id="dateOfBirth"
@@ -269,7 +269,7 @@ const Profile = () => {
                   <div>
                     <Label className="flex items-center space-x-2 mb-2">
                       <User className="h-4 w-4 text-primary" />
-                      <span>লিঙ্গ</span>
+                      <span>Gender</span>
                     </Label>
                     <Select
                       value={formData.gender.toLowerCase()}
@@ -280,9 +280,9 @@ const Profile = () => {
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="male">পুরুষ</SelectItem>
-                        <SelectItem value="female">মহিলা</SelectItem>
-                        <SelectItem value="other">অন্যান্য</SelectItem>
+                        <SelectItem value="male">Male</SelectItem>
+                        <SelectItem value="female">Female</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -290,7 +290,7 @@ const Profile = () => {
                   <div>
                     <Label className="flex items-center space-x-2 mb-2">
                       <Heart className="h-4 w-4 text-primary" />
-                      <span>রক্তের গ্রুপ</span>
+                      <span>Blood Group</span>
                     </Label>
                     <Select
                       value={formData.bloodGroup}
@@ -311,7 +311,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="weight" className="flex items-center space-x-2">
                       <Weight className="h-4 w-4 text-primary" />
-                      <span>ওজন (কেজি)</span>
+                      <span>Weight (kg)</span>
                     </Label>
                     <Input
                       id="weight"
@@ -327,7 +327,7 @@ const Profile = () => {
                   <div>
                     <Label className="flex items-center space-x-2 mb-2">
                       <Heart className="h-4 w-4 text-primary" />
-                      <span>পছন্দের রক্তদানের ধরণ</span>
+                      <span>Preferred Donation Type</span>
                     </Label>
                     <Select
                       value={formData.preferredDonationType}
@@ -348,7 +348,7 @@ const Profile = () => {
                   <div className="md:col-span-2">
                     <Label htmlFor="address" className="flex items-center space-x-2">
                       <MapPin className="h-4 w-4 text-primary" />
-                      <span>ঠিকানা</span>
+                      <span>Address</span>
                     </Label>
                     <Input
                       id="address"
@@ -363,7 +363,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="emergencyContactName" className="flex items-center space-x-2">
                       <AlertCircle className="h-4 w-4 text-primary" />
-                      <span>জরুরী যোগাযোগের নাম</span>
+                      <span>Emergency Contact Name</span>
                     </Label>
                     <Input
                       id="emergencyContactName"
@@ -378,7 +378,7 @@ const Profile = () => {
                   <div>
                     <Label htmlFor="emergencyContactPhone" className="flex items-center space-x-2">
                       <Phone className="h-4 w-4 text-primary" />
-                      <span>জরুরী যোগাযোগের ফোন</span>
+                      <span>Emergency Contact Phone</span>
                     </Label>
                     <Input
                       id="emergencyContactPhone"
@@ -393,7 +393,7 @@ const Profile = () => {
                   <div className="md:col-span-2">
                     <Label htmlFor="medicalConditions" className="flex items-center space-x-2">
                       <Stethoscope className="h-4 w-4 text-primary" />
-                      <span>মেডিকেল কন্ডিশন/অ্যালার্জি (ঐচ্ছিক)</span>
+                      <span>Medical Conditions/Allergies (optional)</span>
                     </Label>
                     <textarea
                       id="medicalConditions"
@@ -412,9 +412,9 @@ const Profile = () => {
           <TabsContent value="history">
             <Card className="shadow-soft">
               <CardHeader>
-                <CardTitle>রক্তদানের ইতিহাস</CardTitle>
+                <CardTitle>Donation History</CardTitle>
                 <CardDescription>
-                  আপনার সম্পূর্ণ রক্তদানের ইতিহাস এবং অবদান
+                  Your complete blood donation history and contributions
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -427,7 +427,7 @@ const Profile = () => {
                         </div>
                         <div>
                           <div className="font-medium text-foreground">
-                            রক্তদান #{donationHistory.length - index} - {donation.type}
+                            Donation #{donationHistory.length - index} - {donation.type}
                           </div>
                           <div className="text-sm text-muted-foreground">
                             {donation.location}
@@ -436,7 +436,7 @@ const Profile = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-sm font-medium text-foreground">
-                          {new Date(donation.date).toLocaleDateString('bn-BD')}
+                          {new Date(donation.date).toLocaleDateString()}
                         </div>
                         <Badge className={getStatusColor(donation.status)}>
                           {donation.status.charAt(0).toUpperCase() + donation.status.slice(1)}
@@ -447,10 +447,10 @@ const Profile = () => {
                 </div>
 
                 <div className="mt-6 p-4 bg-accent/20 rounded-lg">
-                  <h4 className="font-medium text-foreground mb-2">পরবর্তী রক্তদানের যোগ্যতা</h4>
+                  <h4 className="font-medium text-foreground mb-2">Next Donation Eligibility</h4>
                   <p className="text-sm text-muted-foreground">
-                    আপনি আবার <strong>{nextEligibleDate.toLocaleDateString('bn-BD')}</strong> তারিখে রক্তদান করতে পারবেন ({daysToNext} দিন বাকি আছে)।
-                    নিয়মিত রক্তদাতারা প্রতি ৫৬ দিন (৮ সপ্তাহ) পর পর রক্তদান করতে পারেন।
+                    You can donate again after <strong>{nextEligibleDate.toLocaleDateString()}</strong> ({daysToNext} days remaining).
+                    Regular blood donors can donate every 56 days (8 weeks).
                   </p>
                 </div>
               </CardContent>
@@ -460,9 +460,9 @@ const Profile = () => {
           <TabsContent value="achievements">
             <Card className="shadow-soft">
               <CardHeader>
-                <CardTitle>অর্জনসমূহ</CardTitle>
+                <CardTitle>Achievements</CardTitle>
                 <CardDescription>
-                  আপনার রক্তদান যাত্রার মাইলফলক এবং ব্যাজ
+                  Milestones and badges for your donation journey
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -478,7 +478,7 @@ const Profile = () => {
                       <CardContent>
                         <p className="text-sm text-muted-foreground">{ach.description}</p>
                         <Badge variant={ach.unlocked ? "default" : "secondary"} className="mt-2">
-                          {ach.unlocked ? 'অর্জিত' : 'লকড'}
+                          {ach.unlocked ? 'Unlocked' : 'Locked'}
                         </Badge>
                       </CardContent>
                     </Card>
@@ -490,5 +490,7 @@ const Profile = () => {
         </Tabs>
       </div>
     </div>
-);
+  );
+};
+
 export default Profile;
